@@ -1,0 +1,132 @@
+{
+  "name": "candykingdomsam",
+  "title": "Candy Kingdom SAM",
+  "description": "Atmel SAM-based boards, developed by Candy Kingdom",
+  "url": "https://github.com/candykingdom/platform-candykingdomsam",
+  "homepage": "https://github.com/candykingdom/platform-candykingdomsam",
+  "license": "Apache-2.0",
+  "engines": {
+    "platformio": "<5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/platformio/platform-atmelsam.git"
+  },
+  "version": "4.3.0",
+  "packageRepositories": [
+    "https://dl.bintray.com/platformio/dl-packages/manifest.json",
+    "http://dl.platformio.org/packages/manifest.json",
+    {
+    "tool-bossac-candykingdom": [
+        {
+          "url": "https://candykingdom.github.io/firefly-v2-board/tools/bossac_osx.tar.bz2",
+          "sha1": "d485b8724c08f9b17bd954a010727360ee4fde08",
+          "version": "1.7.0",
+          "system": [
+            "darwin_x86_64",
+            "darwin_i386"
+          ]
+        },
+        {
+          "url": "https://candykingdom.github.io/firefly-v2-board/tools/bossac_linux.tar.bz2",
+          "sha1": "8b5204edc53933205a9ede32b0c8ad81242ceaf9",
+          "version": "1.7.0",
+          "system": [
+            "linux_i686",
+            "linux_x86_64"
+          ]
+        },
+        {
+          "url": "https://candykingdom.github.io/firefly-v2-board/tools/bossac_windows.tar.bz2",
+          "sha1": "632c9971ce559f0d433c0349fcc5585601e1d1db",
+          "version": "1.7.0",
+          "system": [
+            "windows",
+            "windows_amd64",
+            "windows_x86"
+          ]
+        }
+      ],
+      "framework-arduino-samd-candykingdom": [
+        {
+          "url": "https://github.com/candykingdom/firefly-v2-board/archive/v0.0.9.tar.gz",
+          "sha1": "5d25ea6af903be88d345146879818bb7e6a307b8",
+          "version": "0.0.9",
+          "system": "*"
+        }
+      ]
+    }
+  ],
+  "frameworks": {
+    "arduino": {
+      "package": "framework-arduino-sam",
+      "script": "builder/frameworks/arduino.py"
+    }
+  },
+  "packages": {
+    "toolchain-gccarmnoneeabi": {
+      "type": "toolchain",
+      "version": "~1.70201.0"
+    },
+    "framework-arduino-sam": {
+      "type": "framework",
+      "optional": true,
+      "version": "~1.6.12"
+    },
+    "framework-arduino-samd": {
+      "type": "framework",
+      "optional": true,
+      "version": "~1.8.6"
+    },
+    "framework-arduino-samd-candykingdom": {
+      "type": "framework",
+      "optional": false,
+      "version": "~0.0.9"
+    },
+    "framework-cmsis": {
+      "type": "framework",
+      "optional": true,
+      "version": "~1.40500.0"
+    },
+    "framework-cmsis-atmel": {
+      "type": "framework",
+      "optional": true,
+      "version": "~1.2.0"
+    },
+    "tool-bossac-candykingdom": {
+      "type": "uploader",
+      "optional": true,
+      "version": "1.7.0"
+    },
+    "tool-mbctool": {
+      "optional": true,
+      "version": ">=2.0.0"
+    },
+    "tool-openocd": {
+      "type": "uploader",
+      "optional": true,
+      "version": "~2.1000.0"
+    },
+    "tool-jlink": {
+      "type": "uploader",
+      "optional": true,
+      "version": "^1.63208.0"
+    },
+    "tool-cmake": {
+      "optional": true,
+      "version": "~3.16.0"
+    },
+    "tool-dtc": {
+      "optional": true,
+      "version": "~1.4.7"
+    },
+    "tool-ninja": {
+      "optional": true,
+      "version": "^1.7.0"
+    },
+    "tool-gperf": {
+      "optional": true,
+      "version": "^3.0.0"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "build": {
+    "arduino": {
+        "ldscript": "flash_with_bootloader.ld"
+    },
+    "core": "candykingdom",
+    "cpu": "cortex-m0plus",
+    "extra_flags": "-DARDUINO_ARCH_SAMD -DARM_MATH_CM0PLUS -D__SAMD21G17A__ -DCANDYKINGDOM_FIREFLY_RFBOARD -DCRYSTALLESS -DFASTLED_HAS_CLOCKLESS",
+    "f_cpu": "48000000L",
+    "hwids": [
+      [
+        "0xF182",
+        "0x8002"
+      ]
+    ],
+    "mcu": "samd21g17a",
+    "system": "samd",
+    "usb_product": "rfboard",
+    "variant": "rfboard"
+  },
+  "debug": {
+    "jlink_device": "ATSAMD21G17",
+    "openocd_chipname": "at91samd21g17",
+    "openocd_target": "at91samdXX",
+    "svd_path": "ATSAMD21G17A.svd"
+  },
+  "frameworks": [
+    "arduino"
+  ],
+  "name": "rfboard",
+  "upload": {
+    "disable_flushing": true,
+    "maximum_ram_size": 16384,
+    "maximum_size": 131072,
+    "native_usb": true,
+    "offset_address": "0x2000",
+    "protocol": "sam-ba",
+    "protocols": [
+      "sam-ba",
+      "blackmagic",
+      "jlink",
+      "atmel-ice"
+    ],
+    "require_upload_port": true,
+    "use_1200bps_touch": true,
+    "wait_for_upload_port": true,
+    "usbid": ["F182", "8002"]
+  },
+  "url": "https://www.adafruit.com/product/2772",
+  "vendor": "Candy Kingdom"
+}
+

@@ -1,0 +1,18 @@
+language: python
+python:
+  - "2.7"
+  - "3.6"
+
+env:
+  - PLATFORMIO_PROJECT_DIR=examples/arduino-blink
+  - PLATFORMIO_PROJECT_DIR=examples/arduino-briki-internal-libs
+  - PLATFORMIO_PROJECT_DIR=examples/arduino-external-libs
+  - PLATFORMIO_PROJECT_DIR=examples/arduino-internal-libs
+  - PLATFORMIO_PROJECT_DIR=examples/arduino-web-thing-led
+
+install:
+  - pip install -U https://github.com/platformio/platformio/archive/develop.zip
+  - platformio platform install file://.
+
+script:
+  - platformio run -d $PLATFORMIO_PROJECT_DIR
